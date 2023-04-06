@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--    Toolbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:layout_weight="0.5">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/m"
+            app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:fontFamily="sans-serif"
+            android:text="Music"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_125sdp"
+            android:src="@drawable/search1"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/manu"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!--Name view-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/round"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="Relax"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/round"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="Energize"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/round"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="Workout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/round"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="Commute"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/round"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="Focus"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="START RADIO FROM A SONG"
+                    android:textColor="#8C8787"
+                    android:textSize="@dimen/_13ssp" />
+
+                <!--            Quick picks-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="Quick picks"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_25ssp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <!--    box -1-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:orientation="vertical">
+                            <!--    line1-->
+                            <LinearLayout
+                                android:id="@+id/layPlay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/ramsiya"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTitle1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Ram Siya Ram New"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtData"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Laxman Singh Adhikari"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_50sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line2-->
+                            <LinearLayout
+                                android:id="@+id/layPlay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/adiyogi"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTitle2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Adiyogi (The Source of Yoga)"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtData2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Kalish Kher"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line3-->
+                            <LinearLayout
+                                android:id="@+id/layPlay3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/ramsiya1"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTitle3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Ram Siya Ram "
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtData3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Rohit sangwan"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_93sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line4-->
+                            <LinearLayout
+                                android:id="@+id/layPlay4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/kedarnath"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTitle4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Namo Namo"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtData4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:text="Amit Trivedi"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_108sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--    box -2-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:orientation="vertical">
+                            <!--    line1-->
+                            <LinearLayout
+                                android:id="@+id/layPlaym"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/mangalbhavan"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTitlem"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Sankat Mochan Hanuman"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@id/txtDatam"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Agam Aggarwal"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_33sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line2-->
+                            <LinearLayout
+                                android:id="@+id/layPlay6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/meriradhe"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTitle6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Meri Radhe"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtData6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="mr.Krishnaprajapati"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_70sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line3-->
+                            <LinearLayout
+                                android:id="@+id/layPlay7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/ae_dill"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTitle7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Ae Dil Hai Mushkil  "
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtData7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Pritam"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_70sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line4-->
+                            <LinearLayout
+                                android:id="@+id/layPlay8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/karhar_medan"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txtTitle8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Kar Har Maidaan Fateh"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@id/txtDatae"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:text="Vikram Montrose"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_50sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--    box -3-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_1sdp"
+                            android:orientation="vertical">
+                            <!--    line1-->
+                            <LinearLayout
+                                android:id="@+id/layPlay9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/chhichore"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Chhichore"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Pritam"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_145sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line2-->
+                            <LinearLayout
+                                android:id="@+id/layPlay10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/dopeg"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Do Peg Maar"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Neha Kakkar"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_130sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line3-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/sunlezara"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Sun Le Zara "
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Arijit Singh"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_135sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <!--    line4-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/_45sdp"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:src="@drawable/vaste"
+                                    app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="Vaaste"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:text="Nikhil D'souza &amp; Dhvani Bhanushali"
+                                        android:textColor="#9C9797"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:src="@drawable/three_dots"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--            From the community-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="From the community"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--                    line1-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/soul"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="soul"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Rinkesh Kanani • 20 songs"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <!--                    line2-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20ssp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/dimpleplaylist"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dimple playlist."
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Dimple Rathore • 30 songs "
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/love"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="love"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Rinkesh Kanani .20 songs"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/romantic"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="romantic"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Rinkesh Kanani .20 songs"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/chill"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="chills"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="inyourdreams • 68 songs"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/sagar"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="sagar"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Sasmita Mallick • 31 songs"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--            Recommended playlists-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text=" Recommended playlists"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--                    line1-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/arjitsingh"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Presenting Arijit Singh"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Arijit Singh, Pritam, Akshay Kumar, Rajkummar Rao.."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <!--                    line2-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20ssp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/voicesofindia"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="India Ki Udaan"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="A. R. Rahman, Shankar Mahadevan, Arijit Singh,.. "
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/ranvirkapoor"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Presenting Ranbir Kapoor"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Arijit Singh, Pritam, Ranbir Kapoor, Amitabh.."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/bollywodromantic"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bollywood Romance Essentials"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Arijit Singh, Sidharth Malhotra, Asees Kaur,..."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/womenmusic"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Women in Music: Hindi"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Payal Dev, Prakriti Kakar, Dhvani Bhanushali, Palak....."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/shahrukhkhan"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Presenting Shah Rukh Khan"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Shah Rukh Khan, Udit Narayan, Lata..."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_20sdp"
+                    app:cardBackgroundColor="#440255"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="@dimen/_80sdp"
+                                android:src="@drawable/bollywoodsufi"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bollywood Sufi Essentials"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_20ssp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="@dimen/_110sdp"
+                                    android:layout_height="wrap_content"
+                                    android:text=" YouTube Music 50 songs"
+                                    android:textColor="#9D9A9E"
+                                    android:textSize="@dimen/_15ssp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text=" Bollywood's take on the mystical and mesmerising sound of Sufi music."
+                            android:textColor="#9D9A9E"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <!--    line1-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:src="@drawable/ramsiya"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Ram Siya Ram New"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13ssp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Laxman Singh Adhikari"
+                                    android:textColor="#9C9797"
+                                    android:textSize="@dimen/_13ssp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/three_dots"
+                                app:tint="@color/white" />
+                        </LinearLayout>
+
+                        <!--    line2-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:src="@drawable/adiyogi"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Adiyogi(The Source of Yoga)"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13ssp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Kalish Kher"
+                                    android:textColor="#9C9797"
+                                    android:textSize="@dimen/_13ssp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:src="@drawable/three_dots"
+                                app:tint="@color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:background="@drawable/round"
+                                android:padding="@dimen/_10sdp"
+                                android:src="@drawable/baseline_play" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@drawable/round"
+                                android:padding="@dimen/_10sdp"
+                                android:src="@drawable/play_button" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@drawable/round"
+                                android:padding="@dimen/_10sdp"
+                                android:src="@drawable/library"
+                                app:tint="@color/white" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <!--    Bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_weight="0.7"
+        android:background="#202020">
+
+        <!--        home-->
+        <LinearLayout
+            android:id="@+id/layMHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:src="@drawable/home"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Home"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <!--        compass-->
+        <LinearLayout
+
+            android:id="@+id/layMExplore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:src="@drawable/compass"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Explore"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <!--        music_libery-->
+        <LinearLayout
+            android:id="@+id/layMLibery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:src="@drawable/music_archive"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Library"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <!--        upgrade-->
+        <LinearLayout
+            android:id="@+id/layMUpgrade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:src="@drawable/play2"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upgrade"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

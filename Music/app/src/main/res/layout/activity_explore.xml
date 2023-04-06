@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ExploreActivity">
+
+    <!--    Toolbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_weight="0.5">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/m"
+            app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:fontFamily="sans-serif"
+            android:text="Music"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_125sdp"
+            android:src="@drawable/search1"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/manu"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Name view-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/box"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/exmusic"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content"
+                            android:text="New "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content"
+
+                            android:text="releases"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:background="@drawable/box"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/charts"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:text="Charts"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:background="@drawable/box"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/mood"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content"
+                            android:text="Moods &amp; "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content"
+                            android:text="genres"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15ssp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp">
+                    <!--           Albums and singles-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:text="Albums and singles"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_50sdp"
+                        android:background="@drawable/round"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="More"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--                    line1-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/missionmajnu"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="@dimen/_165sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Mission Majnu (Original Motion Picture Soundtrack)"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Album • Tanishk Bagchi, Rochak Kohli,"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <!--                    line2-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20ssp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/revival"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Revival-Nusrat"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Album • Rahat Fateh Ali Khan "
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/pyaarhona"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pyaar Hona Na Tha"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Single • Jubin Nautiyal &amp; Payal Dev"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/hindustan"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hindustan"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Single • Altamash Faridi"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/babashiv"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Baba Shiv Baba"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Single • Palak Muchhal"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/terepyaar"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="sagar"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Sasmita Mallick • 31 songs"
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp">
+                    <!--           Albums and singles-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:text="Mood &amp; genres"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_90sdp"
+                        android:background="@drawable/round"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="More"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <!--    box -1-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:orientation="vertical">
+                            <!--line1-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#06BCA9" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hindi"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line2-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#80D8FF" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ghazal/surfi"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line3-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FF8A80" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Romance"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <!--    box -2-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:orientation="vertical">
+                            <!--line1-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#B9F6CA" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Indian Pop"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line2-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#CCFF90" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Monsoon"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line3-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#B388FF" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Indian Indie"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <!--    box -3-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:orientation="vertical">
+                            <!--line1-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#82B1FF" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Folk &amp; Acoustic"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line2-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#84FFFF" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="2010s"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line3-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#EA80FC" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sleep"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <!--    box -4-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:orientation="vertical">
+                            <!--line1-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#8C9EFF" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Party"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line2-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#06BCA9" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Commute"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line3-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FF9E80" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Feel Good"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <!--    box -5-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:orientation="vertical">
+                            <!--line1-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#545756" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Focuse"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line2-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#B9F6CA" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="1990s"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line3-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#06BCA9" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Workout"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <!--    box -6-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:orientation="vertical">
+                            <!--line1-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#82B1FF" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Chill"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line2-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FF8A80" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Energy Boosters"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line3-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#06BCA9" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="2000s"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <!--    box -7-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:orientation="vertical">
+                            <!--line1-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#F4FF81" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hip-Hop"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line2-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#06BCA9" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Devotional"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <!--line3-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardBackgroundColor="#434343"
+                                app:cardElevation="@dimen/_20sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="#06BCA9" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hindustani classical"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@color/white"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <!--            Trending-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text=" Trending "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--                    line1-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/arjitsingh"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Presenting Arijit Singh"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Arijit Singh, Pritam, Akshay Kumar, Rajkummar Rao.."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <!--                    line2-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20ssp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/voicesofindia"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="India Ki Udaan"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="A. R. Rahman, Shankar Mahadevan, Arijit Singh,.. "
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/ranvirkapoor"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Presenting Ranbir Kapoor"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Arijit Singh, Pritam, Ranbir Kapoor, Amitabh.."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/bollywodromantic"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bollywood Romance Essentials"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Arijit Singh, Sidharth Malhotra, Asees Kaur,..."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/womenmusic"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Women in Music: Hindi"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Payal Dev, Prakriti Kakar, Dhvani Bhanushali, Palak....."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/shahrukhkhan"
+                                app:shapeAppearanceOverlay="@style/roundedImageStyle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Presenting Shah Rukh Khan"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Shah Rukh Khan, Udit Narayan, Lata..."
+                                android:textColor="#717070"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <!--    Bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_weight="0.6"
+        android:background="#202020">
+
+        <!--        home-->
+        <LinearLayout
+            android:id="@+id/layEHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:src="@drawable/home"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Home"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <!--        compass-->
+        <LinearLayout
+
+            android:id="@+id/layEExplore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:src="@drawable/compass"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Explore"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <!--        music_libery-->
+        <LinearLayout
+            android:id="@+id/layELibery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:src="@drawable/music_archive"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Library"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <!--        upgrade-->
+        <LinearLayout
+            android:id="@+id/layEUpgrade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:src="@drawable/play2"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upgrade"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
