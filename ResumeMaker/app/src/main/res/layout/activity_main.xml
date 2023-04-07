@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title">
+        <!--    Page Title-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:text="RESUME FROM"
+            android:textAlignment="center"
+            android:textColor="#1E88E5"
+            android:textSize="@dimen/_30ssp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--    Person info Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="* Person Information"
+                android:textColor="#706E6E"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <!--  First Name   &    Last Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--        First Name-->
+                <EditText
+                    android:id="@+id/edtFName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custtom"
+                    android:hint="First Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/_20sdp"
+                    android:textStyle="bold" />
+
+                <!--        Last Name-->
+                <EditText
+                    android:id="@+id/edtLName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custtom"
+                    android:hint="Last Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/_20sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!--    Email-->
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/custtom"
+                android:hint="Enter your Email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+            <!--    Mobil Number-->
+            <EditText
+                android:id="@+id/edtNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/custtom"
+                android:hint="Enter your Mobil Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+            <!--    Address-->
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custtom"
+                android:hint="Enter your Address"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+            <!--    Gender-->
+
+            <!--  Gender Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="* Gender"
+                android:textColor="#706E6E"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!--        Male-->
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="Male"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Female-->
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Female"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+                <!--        Other-->
+                <RadioButton
+                    android:id="@+id/rbOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="Other"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <!--   Hobby-->
+
+            <!--  Hobby Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="* Hobby"
+                android:textColor="#706E6E"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <!--        Chk Redding-->
+                <CheckBox
+                    android:id="@+id/chkRedding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:text="Redding"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk Journey-->
+                <CheckBox
+                    android:id="@+id/chkJourney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:text="Journey"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk Sports-->
+                <CheckBox
+                    android:id="@+id/chkSports"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:text="Sports"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--    Marital status-->
+            <!--  Marital Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="* Marital status"
+                android:textColor="#706E6E"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/maGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!--        Married-->
+                <RadioButton
+                    android:id="@+id/rbMarried"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="Married"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <!--       Un-Married-->
+                <RadioButton
+                    android:id="@+id/rbUnMarried"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Un-Married"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+
+            <!--    Eduction info Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="* Eduction Information"
+                android:textColor="#706E6E"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <!--            Class Title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <!--                Class-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="Class"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+                <!--                 Marks-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_weight="1"
+                    android:text="Marks"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <!--                 Year-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_weight="1"
+                    android:text="Year"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--            10 Marks & year-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20ssp"
+                    android:layout_weight="1"
+                    android:text="* 10th"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+                <!--                10 Marks-->
+                <EditText
+                    android:id="@+id/edtMarks10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxcusttom"
+                    android:hint="Marks"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/_15sdp"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <!--                10 Year-->
+                <EditText
+                    android:id="@+id/edtYear10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxcusttom"
+                    android:hint="Year"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/_15sdp"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <!--            12 Marks & year-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="* 12th"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+                <!--                12 Marks-->
+                <EditText
+                    android:id="@+id/edtMarks12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxcusttom"
+                    android:hint="Marks"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/_15sdp"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+
+                <!--                12 Year-->
+                <EditText
+                    android:id="@+id/edtYear12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxcusttom"
+                    android:hint="Year"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/_15sdp"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!--            Collage Marks & year-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="* BCA"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+                <!--                Collage Marks-->
+                <EditText
+                    android:id="@+id/edtMarksBCA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxcusttom"
+                    android:hint="Marks"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/_15sdp"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <!--                Collage Year-->
+                <EditText
+                    android:id="@+id/edtYearBCA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxcusttom"
+                    android:hint="Year"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/_15sdp"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!--            Experience Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="* Experience"
+                android:textColor="#706E6E"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--                Experience job Name-->
+                <EditText
+                    android:id="@+id/edtExJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custtom"
+                    android:hint="Job Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/_20sdp"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+                <!--                Experience year-->
+                <EditText
+                    android:id="@+id/edtExYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custtom"
+                    android:hint="Job Year"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:padding="@dimen/_20sdp"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--            Skill Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="* Your Skill"
+                android:textColor="#706E6E"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+            <!--            Line-1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <!--        Chk C -->
+                <CheckBox
+                    android:id="@+id/chkC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk C++-->
+                <CheckBox
+                    android:id="@+id/chkCpp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="C++"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk Java-->
+                <CheckBox
+                    android:id="@+id/chkJava"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Java"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--            Line-2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <!--        Chk Html -->
+                <CheckBox
+                    android:id="@+id/chkHtml"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Html"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk Css-->
+                <CheckBox
+                    android:id="@+id/chkCss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Css"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk JavaScript-->
+                <CheckBox
+                    android:id="@+id/chkJavaScript"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Java Script"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--            Line-3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <!--        Chk C# -->
+                <CheckBox
+                    android:id="@+id/chkChase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="C#"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk Python-->
+                <CheckBox
+                    android:id="@+id/chkPython"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Python"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk Kotlin-->
+                <CheckBox
+                    android:id="@+id/chkKotlin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Kotlin"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--            Line-4-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <!--        Chk Android -->
+                <CheckBox
+                    android:id="@+id/chkAndroid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Android"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk Wab-->
+                <CheckBox
+                    android:id="@+id/chkWab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Wab"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <!--        Chk Flutter-->
+                <CheckBox
+                    android:id="@+id/chkFlutter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Flutter"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--            Submit & Clear-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <!--    Submit-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttoncusttom"
+                    android:padding="@dimen/_20sdp"
+                    android:text="Submit"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+                <!--    Clear-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttoncusttom"
+                    android:padding="@dimen/_20sdp"
+                    android:text="Clear"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

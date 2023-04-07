@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FB8C00"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--    Tital-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:text="Calculator"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <!--    Number1-->
+    <EditText
+        android:id="@+id/edtF_Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Enter yor First Number"
+        android:imeOptions="actionNext"
+        android:inputType="number" />
+
+    <!--    Number2-->
+    <EditText
+        android:id="@+id/edtS_Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter yor Second Number"
+        android:imeOptions="actionDone"
+        android:inputType="number" />
+
+    <!--    Answer-->
+    <TextView
+        android:id="@+id/txtAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <!--    Addition-->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!--    Substrations-->
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!--    Multiplication-->
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!--    Dividation-->
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+    <!--    Clear-->
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

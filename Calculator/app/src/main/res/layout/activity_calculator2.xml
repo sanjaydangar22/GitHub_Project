@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".calculator2">
+
+    <EditText
+        android:id="@+id/edtNo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Entre First Number"
+        android:textSize="20sp"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/edtNo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        android:hint="Entre Second Number"
+        android:imeOptions="actionNext"
+        android:minHeight="48dp"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtNo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        android:hint="Entre Third Number"
+        android:imeOptions="actionNext"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtNo4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Entre Ford Number"
+        android:textSize="20sp"
+        android:minHeight="48dp"
+        android:imeOptions="actionDone"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        android:layout_margin="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="#FB8C00"
+        android:minHeight="48dp"
+        android:textSize="30sp"
+        android:padding="20dp"
+        android:text="Total"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:textSize="30sp"
+        android:padding="20dp"
+        android:background="#FB8C00"
+        android:text="Clear"
+        android:textStyle="bold" />
+
+</LinearLayout>

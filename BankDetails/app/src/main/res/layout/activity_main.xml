@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--Title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="#FFB300"
+        android:paddingLeft="80dp"
+        android:text="All Bank Details"
+        android:textColor="#DA0D0D"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--            Sbi Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sbi" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#039BE5"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#039BE5"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#039BE5"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <!--BOB Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bob" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#FB8C00"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#FB8C00"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#FB8C00"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <!--Hdfc Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/hdfc" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#F65652"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#F65652"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#F65652"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <!--Axis Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/axis" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#910F0C"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#910F0C"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#910F0C"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <!--BOI Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/boi1" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallBI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#E0E5EA"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitBI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#E0E5EA"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareBI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#E0E5EA"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <!--PNG Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/png" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#A80E46"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#A80E46"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#A80E46"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--YES Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/yes" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#9A9C9E"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#9A9C9E"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#9A9C9E"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--CBI Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cbi" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#F10B06"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#F10B06"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#F10B06"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--UNION Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/union" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#7486FA"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#7486FA"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#7486FA"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--ICICI Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <!--                Bank Image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icici" />
+
+                <!--                Call Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCallI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#EF7954"
+                    android:text="Call"
+                    android:textStyle="bold" />
+
+                <!--                Visit Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnVisitI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#EF7954"
+                    android:text="Visit"
+                    android:textStyle="bold" />
+
+
+                <!--                Share Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShareI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#EF7954"
+                    android:text="Share"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
