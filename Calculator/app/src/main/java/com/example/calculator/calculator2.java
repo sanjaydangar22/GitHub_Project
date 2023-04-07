@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class calculator2 extends AppCompatActivity {
+public class Calculator2 extends AppCompatActivity {
     EditText edtNo1, edtNo2, edtNo3, edtNo4;
     TextView txtAns;
     AppCompatButton btnTotal, btnClear;

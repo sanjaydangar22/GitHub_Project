@@ -30,10 +30,7 @@ public class MainActivity extends AppCompatActivity {
             Intent i=new Intent(this,LibraryActivity.class);
             startActivity(i);
         });
-//        mainBinding.layMUpgrade.setOnClickListener(e->{
-//            Intent i=new Intent(this,ExploreActivity.class);
-//            startActivity(i);
-//        });
+
 
 
 //paly1
@@ -136,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         });
         //paly8
         String title8=mainBinding.txtTitle8.getText().toString();
-        String data8=mainBinding.txtDatae.getText().toString();
+        String data8=mainBinding.txtData8.getText().toString();
 
 
         mainBinding.layPlay8.setOnClickListener(p8->{

@@ -30,9 +30,6 @@ public class LibraryActivity extends AppCompatActivity {
             Intent i = new Intent(this, ExploreActivity.class);
             startActivity(i);
         });
-//        libraryBinding.layEUpgrade.setOnClickListener(e->{
-//            Intent i=new Intent(this,ExploreActivity.class);
-//            startActivity(i);
-//        });
+
     }
 }

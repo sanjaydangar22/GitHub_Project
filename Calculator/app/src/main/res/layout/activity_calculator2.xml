@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".calculator2">
+    tools:context=".Calculator2">
 
     <EditText
         android:id="@+id/edtNo1"

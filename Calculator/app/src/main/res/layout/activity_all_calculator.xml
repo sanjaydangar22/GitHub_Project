@@ -4,43 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#B9F6CA"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".AllCalculatorActivity">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="All calculator"
-    android:textSize="40sp"
-    android:textStyle="bold"
-    android:layout_marginVertical="100dp"/>
-    <androidx.appcompat.widget.AppCompatButton
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Simple"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:background="#80D8FF"
-        android:id="@+id/btnSimple"/>
-
+        android:layout_marginVertical="100dp"
+        android:text="All calculator"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSimple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:layout_margin="10dp"
-        android:text="calculator"
         android:background="#80D8FF"
-        android:id="@+id/btnCalculator"/>
+        android:padding="10dp"
+        android:text="Simple" />
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:layout_margin="10dp"
-        android:text="Age calculator"
         android:background="#80D8FF"
-        android:id="@+id/btnAge"/>
+        android:padding="10dp"
+        android:text="calculator" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#80D8FF"
+        android:padding="10dp"
+        android:text="Age calculator" />
 </LinearLayout>

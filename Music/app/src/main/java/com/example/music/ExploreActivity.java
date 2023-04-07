@@ -30,9 +30,6 @@ public class ExploreActivity extends AppCompatActivity {
             Intent i=new Intent(this,LibraryActivity.class);
             startActivity(i);
         });
-//        exploreBinding.layEUpgrade.setOnClickListener(e->{
-//            Intent i=new Intent(this,ExploreActivity.class);
-//            startActivity(i);
-//        });
+
     }
 }

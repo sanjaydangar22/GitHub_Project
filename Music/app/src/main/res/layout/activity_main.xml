@@ -551,7 +551,7 @@
                                         android:textStyle="bold" />
 
                                     <TextView
-                                        android:id="@id/txtDatae"
+                                        android:id="@id/txtData8"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginStart="@dimen/_15sdp"
