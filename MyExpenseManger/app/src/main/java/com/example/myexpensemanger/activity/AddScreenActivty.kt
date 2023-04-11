@@ -112,7 +112,20 @@ class AddScreenActivty : AppCompatActivity() {
                 Toast.makeText(this, "Please Enter valid Note", Toast.LENGTH_SHORT).show()
             } else {
 
+                if (addScreenBinding.rgGroup.checkedRadioButtonId == -1) {
 
+                } else {
+                    val selectId: Int = addScreenBinding.rgGroup.checkedRadioButtonId
+                    var selectedRadioButton: RadioButton = findViewById(selectId)
+                    var text = selectedRadioButton.text.toString()
+
+                    page = if (text == "Income") {
+                        "Income"
+                    } else {
+                        "expense"
+                    }
+
+                }
                 Log.e("TAG", "select button: " + addScreenBinding.imgDone.text.toString())
                 if (flag == 1) {
 

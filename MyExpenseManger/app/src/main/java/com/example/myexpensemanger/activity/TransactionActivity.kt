@@ -10,10 +10,8 @@ import android.util.Log
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myexpensemanger.adapter.DialogCategoryAdapter
 import com.example.myexpensemanger.adapter.TransactionAdapter
 import com.example.myexpensemanger.databinding.ActivityTransactionBinding
-import com.example.myexpensemanger.databinding.DialogCategoryBinding
 import com.example.myexpensemanger.databinding.DialogDeleteBinding
 import com.example.myexpensemanger.modelclass.IncomeExpenseModelClass
 import com.example.myexpensemanger.sqlite.SqLiteHelperData
