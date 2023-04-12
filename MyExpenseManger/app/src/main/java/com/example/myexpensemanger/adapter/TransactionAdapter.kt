@@ -1,17 +1,15 @@
 package com.example.myexpensemanger.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myexpensemanger.R
-import com.example.myexpensemanger.activity.AddScreenActivty
 import com.example.myexpensemanger.modelclass.IncomeExpenseModelClass
 
 class TransactionAdapter(
@@ -20,7 +18,8 @@ class TransactionAdapter(
     var edit: (IncomeExpenseModelClass) -> Unit,
     var delete: (Int) -> Unit
 ) : RecyclerView.Adapter<TransactionAdapter.MyViewHolder>() {
-
+    var income = 0
+    var expense = 0
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -65,11 +64,20 @@ class TransactionAdapter(
 
             delete.invoke(listTransaction[position].id)
 
-
-
         }
+        if (holder.type.text.toString() == "Income") {
+            holder.amount.setTextColor(Color.GREEN)
+            val incomeAmount = holder.amount.text.toString()
+            income = incomeAmount.toInt()
+            Log.e("TAG", "onIncome: $income")
+            incomeFunction(income)
 
-
+        } else {
+            holder.amount.setTextColor(Color.RED)
+            val expenseAmount = holder.amount.text.toString()
+            expense = expenseAmount.toInt()
+            Log.e("TAG", "onExpense: $expense")
+        }
     }
 
     fun updateData(listTransaction: ArrayList<IncomeExpenseModelClass>) {
@@ -78,7 +86,17 @@ class TransactionAdapter(
         notifyDataSetChanged()
     }
 
+    fun incomeFunction(income: Int): Int {
+        var valueIncome= income
+        Log.e("function", "income: "+valueIncome )
+        return valueIncome
+
+    }
+
+    fun expenseFunction(): Int {
+        Log.e("function", "expense: "+expense )
+        return expense
 
 
-
+    }
 }

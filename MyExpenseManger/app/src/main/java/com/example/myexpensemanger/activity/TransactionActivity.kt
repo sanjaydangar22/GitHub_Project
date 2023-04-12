@@ -33,6 +33,17 @@ class TransactionActivity : AppCompatActivity() {
 
         dbT = SqLiteHelperData(this)  // set context class in sqlite
         initView()
+        amount()
+    }
+
+    private fun amount() {
+        var incomeAmount=transactionBinding.txtIncome.text
+        var expenseAmount=transactionBinding.txtExpense.text
+//        incomeAmount= adapter1.incomeFunction().toString()
+
+        Log.e("tra", "incomeAmount: $incomeAmount")
+        expenseAmount=adapter1.expenseFunction().toString()
+        Log.e("tra", "expenseAmount: $expenseAmount")
     }
 
     private fun initView() {

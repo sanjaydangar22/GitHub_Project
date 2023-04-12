@@ -3,6 +3,8 @@ package com.example.myexpensemanger.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import androidx.core.view.GravityCompat
 import com.example.myexpensemanger.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +20,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
+        mainBinding.imgMenu.setOnClickListener{
+            mainBinding.drawerLayout.openDrawer(GravityCompat.START)
+        }
 
         var title_income="Add Income"    // define title
         mainBinding.cdIncome.setOnClickListener {
