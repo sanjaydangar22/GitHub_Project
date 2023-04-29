@@ -3,7 +3,9 @@ package com.example.shayriapp.activity
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.os.Environment
 import android.provider.MediaStore
 import android.view.View
 import android.widget.Toast
@@ -11,6 +13,7 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.shayriapp.databinding.ActivityShayriDishplayBinding
+import java.io.*
 
 
 class ShayriDishplayActivity : AppCompatActivity() {
@@ -27,14 +30,19 @@ class ShayriDishplayActivity : AppCompatActivity() {
 
     private fun intiView() {
         shayriBinding.imgBack.setOnClickListener {   //move to one activity to second activity
-            var back = Intent(this, DisplayCategoryActivity::class.java)
-            startActivity(back)
-            finish()
+
+            onBackPressed()
         }
         var shariName: String? = intent.getStringExtra("shariItem")    //set key in variable
         shayriBinding.txtShariDisplay.text = shariName                  // variable set in text view
 
-
+        shayriBinding.imgSaveD.setOnClickListener {
+            shayriBinding.relLayout.setDrawingCacheEnabled(true)
+            shayriBinding.relLayout.buildDrawingCache(true);
+            val data: Bitmap = Bitmap.createBitmap(shayriBinding.relLayout.getDrawingCache())
+            saveImage(data)
+            Toast.makeText(this, "save image", Toast.LENGTH_SHORT).show()
+        }
         //Shear Link
         shayriBinding.imgShare.setOnClickListener(View.OnClickListener { s: View? ->
             val ShareIntent = Intent(Intent.ACTION_SEND)
@@ -67,6 +75,26 @@ class ShayriDishplayActivity : AppCompatActivity() {
             val data = result.data
             val uri = data!!.data
             shayriBinding.imgShow.setImageURI(uri)
+        }
+    }
+
+
+    private fun saveImage(data: Bitmap) {
+        val createFolder = File(
+            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+            "test"
+        )
+        if (!createFolder.exists()) createFolder.mkdir()
+        val saveImage = File(createFolder, "downloadimage.jpg")
+        try {
+            val outputStream: OutputStream = FileOutputStream(saveImage)
+            data.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
+            outputStream.flush()
+            outputStream.close()
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        } catch (e: IOException) {
+            e.printStackTrace()
         }
     }
 }

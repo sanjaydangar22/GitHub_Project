@@ -126,7 +126,7 @@ class MyDatabase(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB
 
     }
 
-    fun Fav_updateRecord(shayri_id: Int, fav: Int) {
+    fun Fav_updateRecord(fav: Int, shayri_id: Int) {
         val update = writableDatabase
         val updateSql =
             "update shayriTB set shayri_Save='$fav'  where shayriText_Id='$shayri_id' "
@@ -139,8 +139,8 @@ class MyDatabase(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB
         val dbS = readableDatabase
         val sqlS = "select * from shayriTB where shayri_Save = 1 "
         val c = dbS.rawQuery(sqlS, null)
-        if (c.count > 0) {
-            c.moveToFirst()
+        if (  c.moveToFirst()) {
+
             do {
                 var shayri_id = c.getInt(0)
                 var shayri = c.getString(1)

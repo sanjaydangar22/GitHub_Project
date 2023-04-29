@@ -21,11 +21,11 @@ import com.example.shayriapp.modeclass.DisplayCategoryModelClass
 
 class DisplayCategoryAdapter(
     var context: Context,            //  context class set using  parameter
-    var shariList: ArrayList<DisplayCategoryModelClass>,  //Array list in model class set using  parameter
     var click: (DisplayCategoryModelClass) -> Unit,     // set invoke
     var like: (Int, Int) -> Unit                  // set invoke
 ) : RecyclerView.Adapter<DisplayCategoryAdapter.MyViewHolder>() {
 
+    var shariList= ArrayList<DisplayCategoryModelClass>()  //Array list in model class set using  parameter
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var ShariItem: TextView = itemView.findViewById(R.id.txtShari)  //id binding
@@ -84,13 +84,13 @@ class DisplayCategoryAdapter(
 
             if (shariList[position].fav == 1) {
 
-                like.invoke(shariList[position].shayri_id, 0)
+                like.invoke(0,shariList[position].shayri_id)
                 holder.imgLikeD.setImageResource(R.drawable.heartwhite)
                 shariList[position].fav = 0
-                Log.e("TAG", "onBindViewHolder: " + shariList[position].fav)
+                Log.e("TAG", "Display: " + shariList[position].fav)
             } else {
 
-                like.invoke(shariList[position].shayri_id, 1)
+                like.invoke(1,shariList[position].shayri_id)
                 holder.imgLikeD.setImageResource(R.drawable.heartcolor)
 
                 shariList[position].fav = 1
@@ -99,6 +99,12 @@ class DisplayCategoryAdapter(
 
         }
 
+    }
+
+    fun updateList(shariList: ArrayList<DisplayCategoryModelClass>) {
+       this.shariList=ArrayList()
+        this.shariList.addAll(shariList)
+        notifyDataSetChanged()
     }
 
 }

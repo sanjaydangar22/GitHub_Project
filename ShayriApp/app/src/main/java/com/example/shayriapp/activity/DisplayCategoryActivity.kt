@@ -3,9 +3,9 @@ package com.example.shayriapp.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shayriapp.MyDatabase
-import com.example.shayriapp.R
 import com.example.shayriapp.adpater.DisplayCategoryAdapter
 import com.example.shayriapp.databinding.ActivityDisplayCategoryBinding
 import com.example.shayriapp.modeclass.DisplayCategoryModelClass
@@ -19,6 +19,7 @@ class DisplayCategoryActivity : AppCompatActivity() {
     var shariList = ArrayList<DisplayCategoryModelClass>()    //Array list in define Model class
     lateinit var adapter: DisplayCategoryAdapter    //Adapter class Define
 
+    var c_ID: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,9 +34,7 @@ class DisplayCategoryActivity : AppCompatActivity() {
     private fun initview() {
 
         displayBinding.imgBack.setOnClickListener {                // one activity to second activity move
-            var back = Intent(this, MainActivity::class.java)
-            startActivity(back)
-            finish()
+            onBackPressed()
         }
         displayBinding.imgLike.setOnClickListener {                     // one activity to second activity move
             var fav = Intent(this, FavoriteActivity::class.java)
@@ -47,20 +46,19 @@ class DisplayCategoryActivity : AppCompatActivity() {
         displayBinding.txtDisplayTitle.text =
             categoryName                 //variable set in textview
 
-        var c_ID = intent.getIntExtra("Id", 0)  // set key data in variable
-        shariList = dbD.shayriData(c_ID)                          //variable set in textview
+        c_ID = intent.getIntExtra("Id", 0)  // set key data in variable
+
 
         adapter = DisplayCategoryAdapter(
             this,
-            shariList,
             {   //create adapter class object and pass parameter
                 var i = Intent(this, ShayriDishplayActivity::class.java)
                 i.putExtra("shariItem", it.shayri_item)
                 startActivity(i)
                 finish()
             },
-            { shayri_id, fav ->
-                dbD.Fav_updateRecord(shayri_id, fav)  //record update
+            {  fav ,shayri_id->
+                dbD.Fav_updateRecord(fav,shayri_id)  //record update
 
             })
 
@@ -68,5 +66,13 @@ class DisplayCategoryActivity : AppCompatActivity() {
         displayBinding.rcvCategoryData.layoutManager = mangar
         displayBinding.rcvCategoryData.adapter = adapter
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        shariList = dbD.shayriData(c_ID)   //variable set in textview
+        adapter.updateList(shariList)
+        Log.e("TAG", "onResume: "+c_ID )
     }
 }

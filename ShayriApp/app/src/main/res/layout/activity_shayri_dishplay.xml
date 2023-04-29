@@ -47,6 +47,7 @@
                 android:gravity="center">
 
                 <RelativeLayout
+                    android:id="@+id/relLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -101,12 +102,6 @@ na jaane kis galī meñ zindagī kī shaam ho jaae " />
                     android:layout_weight="1"
                     android:src="@drawable/save" />
 
-                <ImageView
-                    android:id="@+id/imgLikeD"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="22dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/heartwhite" />
 
                 <ImageView
                     android:id="@+id/imgShare"

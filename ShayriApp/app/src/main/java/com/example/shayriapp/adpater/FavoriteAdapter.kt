@@ -35,27 +35,18 @@ class FavoriteAdapter(var like: (Int, Int) -> Unit) :   //create invoke
 
 
         //like
-        if (list[position].fav == 1) {
-
-            holder.imgLikeD.setImageResource(R.drawable.heartwhite)
-        } else {
-
             holder.imgLikeD.setImageResource(R.drawable.heartcolor)
-        }
+
 
         //like
         holder.imgLikeD.setOnClickListener {
-            if (list[position].fav == 1) {
 
-                like.invoke(list[position].shayri_id, 0)
-                list[position].fav = 0
 
-                Log.e("TAG", "onBindViewHolder: " + list[position].fav)
-            } else {
-                like.invoke(list[position].shayri_id, 1)
+                like.invoke(0,list[position].shayri_id)
 
-                list[position].fav = 1
-            }
+
+                Log.e("TAG", "Favorite: " + list[position].fav)
+
             //click button and set unlike
             deleteItem(position)  //create function and set position
         }

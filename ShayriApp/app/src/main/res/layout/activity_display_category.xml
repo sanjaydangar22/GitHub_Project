@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D5F4DE"
+    android:background="@drawable/bd7"
     android:orientation="vertical"
     tools:context=".activity.DisplayCategoryActivity">
 
@@ -37,7 +37,7 @@
             android:layout_height="@dimen/_20sdp"
             android:layout_gravity="end"
             android:layout_marginHorizontal="@dimen/_20sdp"
-            android:src="@drawable/heartcolor" />
+            android:src="@drawable/heartlike" />
 
     </androidx.appcompat.widget.Toolbar>
 

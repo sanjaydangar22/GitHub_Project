@@ -1,9 +1,7 @@
 package com.example.shayriapp.activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shayriapp.MyDatabase
 import com.example.shayriapp.adpater.FavoriteAdapter
@@ -29,14 +27,12 @@ class FavoriteActivity : AppCompatActivity() {
     private fun initview() {
 
         favoriteBinding.imgBackFav.setOnClickListener {   //move to one activity to second activity
-            var back = Intent(this, MainActivity::class.java)
-            startActivity(back)
-            finish()
+            onBackPressed()
         }
 
         var adpater =
-            FavoriteAdapter { shayri_id, fav ->            //set adapter class and pass parameter
-                db.Fav_updateRecord(shayri_id, fav)                     //set update record in database class
+            FavoriteAdapter {  fav , shayri_id ->            //set adapter class and pass parameter
+                db.Fav_updateRecord( fav,shayri_id)                     //set update record in database class
 
             }
         var manger = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
