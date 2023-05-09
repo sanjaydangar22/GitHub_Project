@@ -37,10 +37,15 @@ class ShayriDishplayActivity : AppCompatActivity() {
         shayriBinding.txtShariDisplay.text = shariName                  // variable set in text view
 
         shayriBinding.imgSaveD.setOnClickListener {
-            shayriBinding.relLayout.setDrawingCacheEnabled(true)
-            shayriBinding.relLayout.buildDrawingCache(true);
-            val data: Bitmap = Bitmap.createBitmap(shayriBinding.relLayout.getDrawingCache())
-            saveImage(data)
+            var image:View=shayriBinding.relLayout
+            image.isDrawingCacheEnabled = true
+            val totalHeight:Int=image.height
+            val totalWidth:Int=image.width
+            image.layout(0,0,totalHeight,totalWidth)
+            image.buildDrawingCache(true)
+            val data: Bitmap = Bitmap.createBitmap(image.drawingCache)
+            image.isDrawingCacheEnabled = false
+           MediaStore.Images.Media.insertImage(contentResolver,data,null,null)
             Toast.makeText(this, "save image", Toast.LENGTH_SHORT).show()
         }
         //Shear Link
@@ -79,22 +84,5 @@ class ShayriDishplayActivity : AppCompatActivity() {
     }
 
 
-    private fun saveImage(data: Bitmap) {
-        val createFolder = File(
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-            "test"
-        )
-        if (!createFolder.exists()) createFolder.mkdir()
-        val saveImage = File(createFolder, "downloadimage.jpg")
-        try {
-            val outputStream: OutputStream = FileOutputStream(saveImage)
-            data.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
-            outputStream.flush()
-            outputStream.close()
-        } catch (e: FileNotFoundException) {
-            e.printStackTrace()
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-    }
+
 }
