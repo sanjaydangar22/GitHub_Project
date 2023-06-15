@@ -43,8 +43,8 @@ public class PlaySongActivity extends AppCompatActivity {
 
 
             switch (song) {
-                case "vishnu":
-                    mp = MediaPlayer.create(this, R.raw.vishnu_stotram);
+                case "ram_siya":
+                    mp = MediaPlayer.create(this, R.raw.ram_siya_ram);
 
                     mp.start();
                     playSongBinding.imgPlay.setImageResource(R.drawable.pause_circle);
@@ -59,8 +59,8 @@ public class PlaySongActivity extends AppCompatActivity {
                     });
 
                     break;
-                case "bolo_har":
-                    mp = MediaPlayer.create(this, R.raw.bolo_har_har);
+                case "adiyogi":
+                    mp = MediaPlayer.create(this, R.raw.adiyogi);
                     mp.start();
                     playSongBinding.imgPlay.setImageResource(R.drawable.pause_circle);
 
@@ -87,8 +87,8 @@ public class PlaySongActivity extends AppCompatActivity {
 
                     });
                     break;
-                case "bam":
-                    mp = MediaPlayer.create(this, R.raw.bham);
+                case "namo":
+                    mp = MediaPlayer.create(this, R.raw.namo_namo_shankara);
                     mp.start();
                     playSongBinding.imgPlay.setImageResource(R.drawable.pause_circle);
 

@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             send.putExtra("img",R.drawable.ramsiya);
             send.putExtra("title",title);
             send.putExtra("data",data);
-            send.putExtra("song","vishnu");
+            send.putExtra("song","ram_siya");
             startActivity(send);
 
         });
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             send.putExtra("img",R.drawable.adiyogi);
             send.putExtra("title",title2);
             send.putExtra("data",data2);
-            send.putExtra("song","bolo_har");
+            send.putExtra("song","adiyogi");
             startActivity(send);
 
         });
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             send.putExtra("img",R.drawable.kedarnath);
             send.putExtra("title",title4);
             send.putExtra("data",data4);
-            send.putExtra("song","bam");
+            send.putExtra("song","namo");
             startActivity(send);
 
         });
