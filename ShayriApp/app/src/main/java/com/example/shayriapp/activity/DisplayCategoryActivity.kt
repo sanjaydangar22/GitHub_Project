@@ -73,6 +73,6 @@ class DisplayCategoryActivity : AppCompatActivity() {
         super.onResume()
         shariList = dbD.shayriData(c_ID)   //variable set in textview
         adapter.updateList(shariList)
-        Log.e("TAG", "onResume: "+c_ID )
+
     }
 }

@@ -43,9 +43,9 @@ class FavoriteAdapter(var like: (Int, Int) -> Unit) :   //create invoke
 
 
                 like.invoke(0,list[position].shayri_id)
+            list[position].fav = 0
 
 
-                Log.e("TAG", "Favorite: " + list[position].fav)
 
             //click button and set unlike
             deleteItem(position)  //create function and set position

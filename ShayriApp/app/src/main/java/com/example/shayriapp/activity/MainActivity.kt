@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                 i.putExtra("Title", it.categoryName)
                 i.putExtra("Id", it.id)
 
-                Log.e("TAG", "initView: " + it.id)
+
                 startActivity(i)
             }
         var manger = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

@@ -13,6 +13,9 @@
         android:layout_height="wrap_content"
         android:background="#448F7F">
 
+
+
+
         <ImageView
             android:id="@+id/imgBackFav"
             android:layout_width="@dimen/_20sdp"
@@ -39,4 +42,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="No Post Favorite"
+        android:id="@+id/txtNoPost"
+        android:textSize="@dimen/_20ssp"
+        android:layout_gravity="center"/>
+
+
 </LinearLayout>

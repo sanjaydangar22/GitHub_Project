@@ -87,7 +87,7 @@ class DisplayCategoryAdapter(
                 like.invoke(0,shariList[position].shayri_id)
                 holder.imgLikeD.setImageResource(R.drawable.heartwhite)
                 shariList[position].fav = 0
-                Log.e("TAG", "Display: " + shariList[position].fav)
+
             } else {
 
                 like.invoke(1,shariList[position].shayri_id)
