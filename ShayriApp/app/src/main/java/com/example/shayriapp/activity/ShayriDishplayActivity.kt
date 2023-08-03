@@ -48,9 +48,7 @@ class ShayriDishplayActivity : AppCompatActivity() {
         }
     }
 
-    // This function is called when the user accepts or decline the permission.
-    // Request Code is used to check which permission called this function.
-    // This request code is provided when the user is prompt for permission.
+
 
     // This function is called when the user accepts or decline the permission.
     // Request Code is used to check which permission called this function.
@@ -98,6 +96,7 @@ class ShayriDishplayActivity : AppCompatActivity() {
         var shariName: String? = intent.getStringExtra("shariItem")    //set key in variable
         shayriBinding.txtShariDisplay.text = shariName                  // variable set in text view
 
+        //save
         shayriBinding.imgSaveD.setOnClickListener {
             val z: View = shayriBinding.relLayout
             z.isDrawingCacheEnabled = true
